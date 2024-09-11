@@ -69,7 +69,7 @@
 </head>
 <body>
 
-    <form id="appointmentForm" action="https://formspree.io/f/mwpezgdq" method="POST">
+  <form id="appointmentForm" action="https://formspree.io/f/mwpezgdq" method="POST">
 
         <h2>Just Like a Close Friend, We're Here for You</h2>
         
@@ -84,7 +84,7 @@
             <input type="email" id="email" name="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}" placeholder="Enter your email address" required>
             <div class="quote" id="emailQuote">"A single email can change the course of your journey. We support you."</div>
         </div>
-
+        
         <div class="form-group">
             <label for="whatsapp">WhatsApp Number</label>
             <input type="text" id="whatsapp" name="whatsapp" placeholder="Enter your 10-digit WhatsApp number" required>
@@ -99,13 +99,26 @@
     <script>
         const quotes = {
             name: [
-                "You're unique, and your journey is just as special. We are with you."
+                "You're unique, and your journey is just as special. We are with you.",
+                "Your name carries the essence of your story. We support you.",
+                "In every letter of your name lies a strength. We are here for you.",
+                "Your name shines with its own light. We support you.",
+                "Every name tells a beautiful story. We are with you.",
+                "You are more than just a name. We are here for you.",
+                "Your identity is the power you hold. We support you.",
+                "Every name holds meaning and greatness. We are with you.",
+                "Your name is a promise of great things. We are here for you.",
+                "You are destined for something amazing. We support you."
             ],
             email: [
-                "A single email can change the course of your journey. We support you."
+                "A single email can change the course of your journey. We support you.",
+                "Your inbox holds the key to new beginnings. We are here for you.",
+                "Reach out, and we’ll be there for you in every message. We support you."
             ],
             whatsapp: [
-                "Connecting with you is our priority, one message at a time. We are with you."
+                "Connecting with you is our priority, one message at a time. We are with you.",
+                "WhatsApp us, and let’s start this journey together. We support you.",
+                "A text away from transformation. We are here for you."
             ]
         };
 
@@ -119,9 +132,25 @@
                 quoteElement.style.display = 'block'; // Show quote on input
                 const randomQuote = quotes[input][Math.floor(Math.random() * quotes[input].length)];
                 quoteElement.textContent = randomQuote;
+                quoteElement.style.color = getRandomColor();
             });
         });
+
+        function getRandomColor() {
+            const colors = ['#e74c3c', '#8e44ad', '#2980b9', '#27ae60', '#f39c12'];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
     </script>
+<div style="margin-top: 20px; text-align: center;">
+    <iframe width="315" height="560" 
+            src="https://www.youtube.com/embed/d69AzNJsOIo?autoplay=1&loop=1&playlist=d69AzNJsOIo" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+    </iframe>
+    <p style="margin-top: 10px; font-size: 18px;">Click To Play This, you will feel power</p>
+</div>
 
 </body>
 </html>
